@@ -1,0 +1,171 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+}
+
+nav {
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  display: block;
+  align-self: center;
+}
+.section-1 {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+}
+.section-1::before {
+  content: "";
+  background: url(../images/hero-bg.jpeg) 0 0 no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  top: -25%;
+  z-index: -1;
+  transform: scaleX(-1);
+}
+
+.hero-txt {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+.hero-txt h1 {
+  width: 40%;
+  font-size: 6rem;
+  margin-left: 2rem;
+}
+
+.hero-txt input {
+  width: 30%;
+  margin-left: 2rem;
+  padding: 0.8rem;
+}
+
+section a {
+  background-color: orange;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  width: fit-content;
+}
+
+section > span {
+  color: orange;
+  font-size: 1.2rem;
+}
+
+.about-section {
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 60px;
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 50%
+    ),
+    url(../images/about-bg.jpeg) -10%;
+  background-repeat: no-repeat;
+}
+
+.about-txt {
+  width: 40%;
+  margin-right: 50px;
+}
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.about-txt p {
+  margin-bottom: 1rem;
+}
+
+.cuisine-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.cuisine-section > * {
+  margin-bottom: 20px;
+}
+
+.cuisine-section ul {
+  display: flex;
+  margin: 20px 0;
+  border-bottom: 2px solid #eee;
+}
+
+.cuisine-section ul li {
+  border-bottom: 3px solid #eee;
+  padding: 0 50px;
+}
+
+.cuisine-section ul li:first-child {
+  color: orange;
+  border-bottom: 3px solid orange;
+  padding-bottom: 5px;
+}
+
+.carousel {
+  display: flex;
+  height: 100%;
+}
+
+.carousel img {
+  max-width: 25%;
+  max-height: 100%;
+  padding: 0 10px;
+  object-fit: cover;
+}
+footer {
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
