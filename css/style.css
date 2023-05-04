@@ -31,7 +31,15 @@ header {
 }
 
 nav {
-  height: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav img {
+  /* display: block; */
+  height: 100px;
+  padding: 10px;
 }
 
 nav ul {
@@ -39,11 +47,22 @@ nav ul {
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
-  align-items: center;
+  align-items: stretch;
 }
 nav li {
   display: block;
-  align-self: center;
+
+  line-height: 60px;
+  padding: 1.2rem;
+}
+
+nav li:hover {
+  background-color: #000;
+  color: #eee;
+}
+
+nav li .fa {
+  padding: 0 10px;
 }
 .section-1 {
   position: relative;
@@ -65,15 +84,24 @@ nav li {
   margin-top: 150px;
   margin-left: 50px;
 }
+
 .hero-txt h1 {
   width: 40%;
   font-size: 6rem;
   margin-left: 2rem;
 }
 
+.hero-txt .subtitle {
+  color: black;
+  display: block;
+  margin-left: 2rem;
+  font-size: 2rem;
+}
+
 .hero-txt input {
   width: 30%;
   margin-left: 2rem;
+  margin-top: 30px;
   padding: 0.8rem;
 }
 
@@ -162,6 +190,28 @@ h2 {
   max-height: 100%;
   padding: 0 10px;
   object-fit: cover;
+}
+
+.hours-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 80px 0;
+}
+
+.hours-section .hours {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.hours div {
+  display: flex;
+  flex-direction: column;
+}
+.hours-section img {
+  width: 50%;
 }
 footer {
 }
