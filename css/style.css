@@ -22,6 +22,7 @@
 /*******************************************/
 
 body {
+  width: 100%;
 }
 
 /******************************************
@@ -63,6 +64,10 @@ nav li:hover {
 nav li .fa {
   padding: 0 10px;
 }
+
+.nav-box {
+  display: none;
+}
 .section-1 {
   position: relative;
   overflow: hidden;
@@ -70,7 +75,13 @@ nav li .fa {
 }
 .section-1::before {
   content: "";
-  background: url(../images/hero-bg.jpeg) 0 0 no-repeat;
+  /* background: url(../images/hero-bg.jpeg) 0 0 no-repeat; */
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1) 60%
+    ),
+    url(../images/hero-bg.jpeg);
   position: absolute;
   width: 100%;
   height: 200%;
@@ -128,10 +139,11 @@ section > span {
   background: linear-gradient(
       to right,
       rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1) 50%
+      rgba(255, 255, 255, 1) 60%
     ),
     url(../images/about-bg.jpeg) -10%;
   background-repeat: no-repeat;
+  background-position: left;
 }
 
 .about-txt {
@@ -170,7 +182,7 @@ h2 {
 
 .cuisine-section ul li {
   border-bottom: 3px solid #eee;
-  padding: 0 50px;
+  padding: 0 3em;
 }
 
 .cuisine-section ul li:first-child {
@@ -256,7 +268,7 @@ h2 {
   justify-content: center;
   gap: 20px;
   margin-bottom: 40px;
-  padding: 40px 10px;
+  padding: 40px 60px;
   text-align: center;
 }
 
@@ -288,3 +300,132 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 865px) {
+  .hero-txt h1 {
+    font-size: 4rem;
+    width: 60%;
+    margin-bottom: 1em;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    background-color: #fff;
+    z-index: 1;
+  }
+  nav li {
+    padding: 0.3rem 1em;
+    background-color: #fff;
+    font-size: 1.5rem;
+  }
+  nav li:not(:last-of-type) {
+    border-bottom: 1px solid #000;
+  }
+
+  .nav-box {
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  .hero-txt {
+    /* text-align: center; */
+  }
+
+  .hero-txt h1 {
+    /* margin: 0 auto; */
+    width: 70%;
+    margin-bottom: 0.8em;
+  }
+
+  .hero-txt input {
+    width: 50%;
+  }
+
+  .hero-txt .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .about-section {
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1) 80%
+      ),
+      url(../images/about-bg.jpeg) -10%;
+  }
+
+  .about-txt {
+    /* width: 60%; */
+    text-align: right;
+    width: 80%;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .cuisine-section {
+    text-align: center;
+  }
+
+  .cuisine-section ul li {
+    padding: 0 1em;
+  }
+
+  .carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .carousel img {
+    max-width: 50%;
+    padding-bottom: 1em;
+    /* object-fit: cover; */
+  }
+
+  .hours {
+    justify-content: space-between;
+  }
+
+  .open-days {
+    font-size: 1rem;
+  }
+
+  .open-hours {
+    font-size: 1.2rem;
+  }
+
+  .test-card {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .carousel img {
+    max-width: 100%;
+  }
+
+  .cuisine-section h2 {
+    text-align: center;
+  }
+  .cuisine-section ul {
+    display: none;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .hours {
+    flex-direction: column;
+    align-items: center;
+  }
+  .open-hours {
+    font-size: 1.4rem;
+  }
+}
