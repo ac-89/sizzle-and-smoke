@@ -78,7 +78,7 @@ nav li .fa {
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 1) 60%
     ),
-    url(../images/pexels-geraud-pfeiffer-6542792.jpg);
+    url(../images/pexels-geraud-pfeiffer-6542792.jpg) -120px;
   background-repeat: no-repeat;
   position: absolute;
   width: 100%;
@@ -101,7 +101,7 @@ nav li .fa {
   margin-left: 2rem;
 }
 
-.hero-txt .subtitle {
+.subtitle {
   color: black;
   display: block;
   margin-left: 2rem;
@@ -304,6 +304,12 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+@media screen and (max-width: 1100px) {
+  .about-section {
+    margin-right: 0;
+  }
+}
 @media screen and (max-width: 865px) {
   .hero-txt h1 {
     font-size: 4rem;
@@ -334,6 +340,26 @@ footer {
     padding: 1rem;
   }
 
+  .section-1::before {
+    content: "";
+    /* background: url(../images/hero-bg.jpeg) 0 0 no-repeat; */
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1) 60%
+      ),
+      url(../images/pexels-geraud-pfeiffer-6542792.jpg) -160px;
+  }
+
+  .section-1,
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .hero-txt {
+    margin-top: 50px;
+  }
+
   .hero-txt h1 {
     /* margin: 0 auto; */
     width: 70%;
@@ -354,7 +380,12 @@ footer {
         rgba(255, 255, 255, 0),
         rgba(255, 255, 255, 1) 80%
       ),
-      url(../images/about-bg.jpeg) -10%;
+      url(../images/pexels-valeria-boltneva-1251198.jpg) -10%;
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+    left: -5%;
+    background-size: 75%;
   }
 
   .about-txt {
@@ -387,6 +418,9 @@ footer {
     padding-bottom: 1em;
     /* object-fit: cover; */
   }
+  .hours-section img {
+    width: 80%;
+  }
 
   .hours {
     justify-content: space-between;
@@ -406,8 +440,28 @@ footer {
 }
 
 @media screen and (max-width: 510px) {
+  .section-1,
+  .about-section {
+    padding: 20px 0;
+  }
+
+  /* .section-1 .hero-txt > * {
+    margin: 0 auto;
+  } */
+  .carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .carousel img {
     max-width: 100%;
+  }
+
+  .about-section {
+    margin-right: 1em;
+  }
+
+  .about-txt {
+    text-align: end;
   }
 
   .cuisine-section h2 {
@@ -420,6 +474,9 @@ footer {
   h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+  }
+  .hours-section img {
+    width: 100%;
   }
   .hours {
     flex-direction: column;
