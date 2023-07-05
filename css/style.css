@@ -321,6 +321,9 @@ footer {
   .about-section {
     height: 500px;
   }
+  .hero-txt {
+    margin-top: 10px;
+  }
   .hero-txt h1 {
     font-size: 4rem;
   }
@@ -352,6 +355,13 @@ footer {
     border-bottom: 1px solid #000;
   }
 
+  nav a {
+    text-decoration: none;
+    color: #000;
+    padding: 0;
+    margin: 0;
+  }
+
   .nav-box {
     display: block;
     font-size: 2rem;
@@ -377,13 +387,15 @@ footer {
   }
 
   .hero-txt {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .hero-txt h1 {
     /* margin: 0 auto; */
     width: 70%;
     margin-bottom: 0.8em;
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
   }
 
   .hero-txt input {
