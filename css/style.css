@@ -89,11 +89,7 @@ nav a:hover {
 .section-1::before {
   content: "";
   /* background: url(../images/hero-bg.jpeg) 0 0 no-repeat; */
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1) 60%
-    ),
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 60%),
     url(../images/pexels-valeria-boltneva-1251198.jpg) -120px;
   background-repeat: no-repeat;
   position: absolute;
@@ -147,11 +143,7 @@ section > span {
   align-items: center;
   justify-content: flex-end;
   margin-right: 60px;
-  background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 1) 80%
-    ),
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%),
     url(../images/pexels-geraud-pfeiffer-6542792.jpg) -10%;
   background-repeat: no-repeat;
   background-position: left;
@@ -371,11 +363,7 @@ footer {
   .section-1::before {
     content: "";
     /* background: url(../images/hero-bg.jpeg) 0 0 no-repeat; */
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1) 60%
-      ),
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 60%),
       url(../images/pexels-valeria-boltneva-1251198.jpg) -60px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -407,11 +395,7 @@ footer {
   }
 
   .about-section {
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1) 80%
-      ),
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 80%),
       url(../images/pexels-geraud-pfeiffer-6542792.jpg) -10%;
     background-repeat: no-repeat;
     background-position: left;
@@ -425,6 +409,10 @@ footer {
     text-align: right;
     width: 80%;
     margin: 0;
+  }
+
+  .about-txt p {
+    font-size: 1.1em;
   }
 
   h2 {
@@ -469,6 +457,10 @@ footer {
   .test-card {
     max-width: 80%;
   }
+
+  .test-card p {
+    font-size: 1.1em;
+  }
 }
 
 @media screen and (max-width: 510px) {
@@ -483,11 +475,7 @@ footer {
   .section-1::before {
     content: "";
     /* background: url(../images/hero-bg.jpeg) 0 0 no-repeat; */
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 1) 60%
-      ),
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 60%),
       url(../images/pexels-valeria-boltneva-1251198.jpg) -660px;
     background-size: cover;
     background-repeat: no-repeat;
